@@ -1,0 +1,13 @@
+name: farmers
+on: [push]
+jobs:
+  run:
+    runs-on: [self-hosted,gcp-google]
+    steps:
+      - name: cml_run
+        env:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo hello world
+          cd ~/models/research
+          python object_detection/model_main_tf2.py --model_dir=gs://kubeflow-test-299509-kubeflowpipelines-default/pre-trained-models/ssd_mobilenet_v2_320x320_coco17_tpu-8 --pipeline_config_path=gs://kubeflow-test-299509-kubeflowpipelines-default/pre-trained-models/ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config 
