@@ -2,7 +2,7 @@ name: farmers
 on: [push]
 jobs:
   run:
-    runs-on: [self-hosted,gcp-google]
+    runs-on: [self-hosted,local]
     steps:
       - name: cml_run
         env:
