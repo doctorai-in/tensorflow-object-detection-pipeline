@@ -10,4 +10,4 @@ jobs:
         run: |
           echo hello world-hi
           cd ~/models/research
-          python3 object_detection/model_main_tf2.py --model_dir=gs://kubeflow-test-299509-kubeflowpipelines-default/pre-trained-models/ssd_mobilenet_v2_320x320_coco17_tpu-8 --pipeline_config_path=gs://kubeflow-test-299509-kubeflowpipelines-default/pre-trained-models/ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config 
+          python3 object_detection/model_main_tf2.py --model_dir=gs://object-detection-pipeline-demo/pre-trained-models/ssd_mobilenet_v2_320x320_coco17_tpu-8 --pipeline_config_path=gs://object-detection-pipeline-demo/pre-trained-models/ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config
